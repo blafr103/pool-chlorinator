@@ -49,7 +49,7 @@ Full bill of materials with quantities and costs is in [Deliverable C](docs/GNG2
 
 ## Firmware
 
-Source: [`src/chlorine_dispenser.ino`](src/chlorine_dispenser/chlorine_dispenser.ino)
+Source: [`src/chlorine_dispenser/chlorine_dispenser.ino`](src/chlorine_dispenser/chlorine_dispenser.ino)
 
 Dependencies: [`NewPing`](https://bitbucket.org/teckel12/arduino-new-ping/) for the ultrasonic sensor.
 
@@ -61,7 +61,9 @@ Key functions:
 - `allumerPompe()` - timed pump run with dispensing LED
 - `loop()` - non-blocking scheduler, safety gating, and LED state
 
-Control-flow diagram: `images/code_flowchart.png` (export Figure 3 from Deliverable C).
+Control flow of the main loop (from Deliverable C):
+
+<img src="images/code_flowchart.png" alt="Firmware control-flow diagram" width="600">
 
 ## Prototypes and results
 
@@ -69,9 +71,12 @@ Control-flow diagram: `images/code_flowchart.png` (export Figure 3 from Delivera
 
 **Prototype 2 - full build.** Plumbed enclosure with reservoir, PEX distribution and refill paths, and mounted electronics. Assemble/disassemble time was tested with independent users and came in well under the 30-minute target. Sealing and equivalent-length pressure-loss tests are documented in [Deliverable E](docs/GNG2501%20-%20Livrable%20E.pdf).
 
-Photos:
-- `images/prototype1_circuit.png` (Deliverable D)
-- `images/prototype2_full.png` (Deliverable E, Figure 7)
+<table>
+  <tr>
+    <td align="center" valign="top"><img src="images/prototype1_circuit.png" alt="Prototype 1 breadboard circuit" width="420"><br><b>Prototype 1</b> - breadboard level sensing</td>
+    <td align="center" valign="top"><img src="images/prototype2_full.png" alt="Prototype 2 full plumbed build" width="420"><br><b>Prototype 2</b> - full plumbed build</td>
+  </tr>
+</table>
 
 ## Repository structure
 
@@ -85,12 +90,14 @@ Photos:
 │   ├── pump_alone/
 │   │   └── pump_alone.ino
 │   └── chlore_level_detector/
-│       └── Detecteur_niveau_chlore_copy_20230318203757.ino
+│       └── chlore_level_detector.ino
 ├── docs/
 │   ├── GNG2501 - Livrable B_mod.pdf
 │   ├── GNG2501 - Livrable C.pdf
 │   ├── GNG2501 - Livrable D.pdf
-│   └── GNG2501 - Livrable E.pdf
+│   ├── GNG2501 - Livrable E.pdf
+│   ├── GNG2501 - Journée de conception.pdf
+│   └── Manuel d’utilisation et de produit_FB3.5.pdf
 └── images/
     ├── code_flowchart.png
     ├── prototype1_circuit.png
@@ -105,6 +112,8 @@ Full design process, in French (uOttawa GNG2501):
 - [Deliverable C](docs/GNG2501%20-%20Livrable%20C.pdf) - detailed design, bill of materials, code-flow diagram
 - [Deliverable D](docs/GNG2501%20-%20Livrable%20D.pdf) - prototype 1 and level-sensing test results
 - [Deliverable E](docs/GNG2501%20-%20Livrable%20E.pdf) - design constraints and full physical prototype
+- [Design Day presentation](docs/GNG2501%20-%20Journ%C3%A9e%20de%20conception.pdf) - material from the Design Day showcase
+- [User and product manual](docs/Manuel%20d%E2%80%99utilisation%20et%20de%20produit_FB3.5.pdf) - operating and product manual
 
 ## Retrospective notes
 
