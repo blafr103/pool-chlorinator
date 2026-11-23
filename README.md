@@ -38,7 +38,7 @@ A one-directional injection tee feeds chlorine into the existing pool plumbing. 
 | --- | --- |
 | Arduino Uno | System controller |
 | HC-SR04 ultrasonic sensor | Reservoir chlorine level |
-| Analog chemistry sensor | Pool level reading |
+| Analog chemistry sensor | Pool chemistry reading |
 | Relay module | Pump switching |
 | 12V pump | Chlorine injection and reservoir refill |
 | Status LEDs (blue / red / orange) | Reservoir, dispensing, over-target alerts |
